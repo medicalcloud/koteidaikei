@@ -1,0 +1,77 @@
+# 黄帝内経（素問・霊枢）原文・注・現代語訳
+
+『黄帝内経』の素問と霊枢を，段落ごとの小さな単位に分け，資料間の異同（校異）・校訂，注釈書の注（原文）と組み合わせたもの。人が読むためだけでなく，LLM が読みやすいことを目指して，1単位を1ファイルにし，ファイルの頭に機械で読める情報（YAML）を付けている。
+
+**現在の状況**：原文（句読点はまだ）・校異・校訂・注（原文）がそろっている。日本語訳・英訳は作業中で，できた単位から `NNN.ja.md`・`NNN.en.md` を足していく。姉妹編に[傷寒論](https://github.com/medicalcloud/shokanron)・[金匱要略](https://github.com/medicalcloud/kinkiyoryaku)がある。
+
+## 構成
+
+```
+素問/NN_篇名/      重広補注黄帝内経素問（81篇。第72・73篇は遺篇）
+霊枢/NN_篇名/      黄帝素問霊枢経（81篇）
+  index.md         篇の説明，篇首の注，篇末の釈音・音釈，単位の一覧
+  NNN.md           原文＋校異・校訂・注釈＋注（原文）
+  NNN.ja.md        日本語訳（作業中）
+  NNN.en.md        英訳（作業中）
+```
+
+- 素問：00 序（新校正序・王冰序・校正者の署名・序の釈音），01〜81 本文，82 目録，83 顧従徳識語，84 素問集注序（張志聡）。
+- 霊枢：00 叙（史崧），01〜81 本文，82 目録，83 四庫全書提要，84 霊枢集注序（張志聡）。
+- 単位の番号：篇ごとの段落の番号（001…）。00・82〜84 は p001…。単位は計 2,930（素問 1,755・霊枢 1,175）。
+- **単位の切れ目は編者の段落**：底本には篇の中の段落がほとんどない（素問は1篇が切れずに続く）ので，Wikisource「黃帝內經」（白文）の段落の境目を底本の本文に移して単位にした。
+
+### ファイルの頭の情報（YAML）
+
+| キー | 内容 |
+|---|---|
+| book | 書名 |
+| part | 素問 または 霊枢 |
+| chapter / chapter_title | 篇の番号と篇名 |
+| unit | 単位の番号（ファイル名） |
+| paragraphs | 篇の中の段落の番号 |
+| title | 単位の題 |
+| punctuated | 原文に句読点を付けたか |
+
+### 各単位の中身
+
+- **原文**：底本の本文（新字体）。
+- **校異・校訂・注釈**：【校異】資料の間の違い。【校訂】本文を改めたところ。【補】【欠字】下に記す補い・欠字。
+- **王冰注・新校正（原文）**（素問）：唐の王冰の注と宋の新校正。〔…〕は注が付く直前の本文。
+- **割注（原文）**（霊枢）：本文中の校語・字音。
+- **張志聡集注（原文）**：清の張志聡『黄帝内経素問集注』『黄帝内経霊枢集注』の注。訳はしない。
+- 篇末の釈音（素問・巻末）・音釈（霊枢・史崧）は篇の `index.md` に原文を置く。訳はしない。
+
+## 本文と資料
+
+### 素問
+
+- **底本**：『重廣補注黃帝內經素問』（四部叢刊本，明翻北宋本）を Wikisource「重廣補注黃帝內經素問 (四部叢刊本)」の入力（頁はすべて「未校正」）によって新字体にしたもの。同じ版の Kanripo（KR3e0001）は半丁ほどの抜けが約29か所あるので照合の資料にした。
+- **補い**：第72 刺法論・第73 本病論（四部叢刊本では篇名と「亡」だけ）は Wikisource「黃帝內經」の白文で補い，遺篇の注は殆知閣『黄帝内经素问遗篇』（撰者不明）から白文と照合して取り出した。巻24の釈音と顧従徳識語は Kanripo にだけあるのでそれによる。底本の入力（Wikisource・Kanripo とも）で失われた字は他の資料で補い【補】と記し，補えないものは「〓」として【欠字】と記した。
+- **照合した資料**：Wikisource「黃帝內經」（白文），殆知閣「重广补注黄帝内经素问」「黄帝内经素问」（王冰注を含む）「黄帝内经素问（白文）」，Kanripo KR3e0001。
+- **校訂**：6か所。底本と同じ版の Kanripo を除く4資料が，その箇所を持つものすべてで一致して底本と違うところだけを改めた。
+
+### 霊枢
+
+- **底本**：『黃帝素問靈樞經』（四部叢刊本）。Kanripo KR3e0002。
+- **補い**：Kanripo の巻11 第6丁（表裏）には素問の丁が誤って入っているので除き，その間の霊枢の本文（第74篇の約200字）を Wikisource「靈樞經 (四庫全書本)」で補った。
+- **外字**：KR-Gaiji の字形の画像と文脈で字を当てた（𩩲・骬・釱・鼽・䀮・盼・腠・脈・眥・痲・蓏）。字形から字が確かめられない3種（KR2107・KR0797・KR0680）は「〓」とした。
+- **照合した資料**：Wikisource「黃帝內經」（白文），Wikisource「靈樞經 (四庫全書本)」，殆知閣「灵枢经」「黄帝内经灵枢」。四庫全書本にだけ篇末の音釈がある篇（第21・29・68・77・79篇）は【注釈】として引用した。
+- **校訂**：24か所（規則は素問と同じ）。
+
+### 共通
+
+- **校異**：「X は「…**字**…」に作る」「…の間に，X は「**字**」がある」の形。字体だけの違い・句読点・資料の欠落（底本の方が多い字句）・資料自体の変換の誤り（Wikisource 白文の化けた字など）は記していない。
+- **字体**：`字体と変換の方針.md` による（新字体を基本とする）。このほか，剌→刺，柰→奈，麤→粗に直し，底本の「冩・寫」は瀉の意味のものを「瀉」，書き写す意味のもの（注の「傳寫誤」など）を「写」にした。「閒」「廼」は底本のまま。人名の王冰は「冰」とする。
+- **張志聡集注**：Wikisource の入力（簡体字）を新字体にした。素問集注は（ ）の中を注とし，霊枢集注は印がないので行ごとに底本の本文との一致の度合いで本文と注を分けた（約2%の行は判定が曖昧）。注は，直前に引かれた本文が終わる段落に付けた。集注が引く本文そのものは載せていない。
+
+## 権利とライセンス
+
+- **古典の文**（素問・霊枢の本文，王冰注・新校正・史崧音釈・張志聡集注，序・識語・四庫全書提要など）：パブリックドメイン。
+- **このプロジェクトで新しく書いたもの**（句読点，校異・校訂・注釈の説明，日本語訳・英訳，解説，YAML の情報など）：LLM（Claude）を使って作成したもの。[クリエイティブ・コモンズ 表示 4.0 国際（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供する。利用するときは出典として「黄帝内経（素問・霊枢）原文・注・現代語訳（Hideaki Takata）」とこのリポジトリを示すこと。詳しくは `LICENSE`。
+- 訳と解説は LLM によるもので，誤りがありうる。臨床に用いる判断の根拠にはしないこと。
+
+---
+
+**English summary**: The *Huangdi neijing* — *Suwen* (Sibu congkan edition with Wang Bing's commentary and the Song editors' notes) and *Lingshu* (Sibu congkan edition) — split into small units (paragraph units following the Wikisource punctuated text). Each unit file contains the classical text (Japanese shinjitai), textual variants among sources, editorial emendations, and commentaries in the original (Wang Bing and the Song editors for the *Suwen*; Zhang Zhicong's collected commentaries for both). Japanese and English translations are in progress. Each file starts with YAML metadata.
+
+**License**: The classical texts are in the public domain. Punctuation, notes, translations, and other material newly written for this project (with the help of an LLM, Claude) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Translations and notes may contain errors and are not medical advice.

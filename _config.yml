@@ -1,0 +1,21 @@
+title: 黄帝内経（素問・霊枢）原文・注
+description: 黄帝内経素問・霊枢（四部叢刊本）の原文，校異・校訂，王冰注・新校正，張志聡集注など
+lang: ja
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+relative_links:
+  enabled: true
+  collections: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - LICENSE
