@@ -4,7 +4,7 @@ title: 目次
 
 # 黄帝内経（素問・霊枢）原文・注・現代語訳
 
-『黄帝内経』の素問（重広補注黄帝内経素問）と霊枢（黄帝素問霊枢経）の四部叢刊本を，段落ごとの単位に分け，資料間の校異・校訂，王冰注・新校正，史崧の音釈，張志聡の集注（原文）を組み合わせたもの。日本語訳・英訳は作業中。
+『黄帝内経』の素問（重広補注黄帝内経素問）と霊枢（黄帝素問霊枢経）の四部叢刊本を，段落ごとの単位に分け，資料間の校異・校訂，王冰注・新校正，史崧の音釈，張志聡の集注（原文）を組み合わせ，日本語訳・英訳を付けたもの。
 
 - 作り方・資料・字体の方針：[README（GitHub）](https://github.com/medicalcloud/koteidaikei#readme)，[字体と変換の方針](字体と変換の方針.md)
 - 全データ（Markdown＋YAML）：[GitHub medicalcloud/koteidaikei](https://github.com/medicalcloud/koteidaikei)
