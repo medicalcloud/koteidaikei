@@ -70,11 +70,11 @@
 ## 権利とライセンス
 
 - **古典の文**（素問・霊枢の本文，王冰注・新校正・史崧音釈・張志聡集注，序・識語・四庫全書提要など）：パブリックドメイン。
-- **このプロジェクトで新しく書いたもの**（句読点，校異・校訂・注釈の説明，日本語訳・英訳，解説，YAML の情報など）：LLM（Claude）を使って作成したもの。[クリエイティブ・コモンズ 表示 4.0 国際（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/deed.ja)で提供する。利用するときは出典として「黄帝内経（素問・霊枢）原文・注・現代語訳（Hideaki Takata）」とこのリポジトリを示すこと。詳しくは `LICENSE`。
+- **このプロジェクトで新しく書いたもの**（句読点，校異・校訂・注釈の説明，日本語訳・英訳，解説，YAML の情報など）：LLM（Claude）を使って作成したもの。[クリエイティブ・コモンズ 表示-継承 4.0 国際（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供する。利用するときは出典として「黄帝内経（素問・霊枢）原文・注・現代語訳（Hideaki Takata）」とこのリポジトリを示すこと。改変したものを配布するときは，同じ CC BY-SA 4.0（またはその互換ライセンス）で提供すること。詳しくは `LICENSE`。
 - 訳と解説は LLM によるもので，誤りがありうる。臨床に用いる判断の根拠にはしないこと。
 
 ---
 
 **English summary**: The *Huangdi neijing* — *Suwen* (Sibu congkan edition with Wang Bing's commentary and the Song editors' notes) and *Lingshu* (Sibu congkan edition) — split into small units (paragraph units following the Wikisource punctuated text). Each unit file contains the classical text (Japanese shinjitai), textual variants among sources, editorial emendations, and commentaries in the original (Wang Bing and the Song editors for the *Suwen*; Zhang Zhicong's collected commentaries for both). Japanese and English translations are in progress. Each file starts with YAML metadata.
 
-**License**: The classical texts are in the public domain. Punctuation, notes, translations, and other material newly written for this project (with the help of an LLM, Claude) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Translations and notes may contain errors and are not medical advice.
+**License**: The classical texts are in the public domain. Punctuation, notes, translations, and other material newly written for this project (with the help of an LLM, Claude) are licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Translations and notes may contain errors and are not medical advice.
