@@ -2,7 +2,7 @@
 
 『黄帝内経』の素問と霊枢を，段落ごとの小さな単位に分け，資料間の異同（校異）・校訂，注釈書の注（原文）と組み合わせたもの。人が読むためだけでなく，LLM が読みやすいことを目指して，1単位を1ファイルにし，ファイルの頭に機械で読める情報（YAML）を付けている。
 
-**現在の状況**：素問・霊枢の全篇について，原文（句読点つき）・校異・校訂・注（原文）・日本語訳・英訳がそろっている（2026-10-11）。張志聡集注・霊枢の割注・釈音・音釈などは原文だけで訳していない。姉妹編に[傷寒論](https://github.com/medicalcloud/shokanron)・[金匱要略](https://github.com/medicalcloud/kinkiyoryaku)がある。
+**現在の状況**：素問・霊枢の全篇について，原文（句読点つき）・校異・校訂・注（原文）・日本語訳・英訳がそろっている（2026-10-11）。張志聡集注・霊枢の割注・釈音・音釈などは原文だけで訳していない。姉妹編に[傷寒論](https://github.com/medicalcloud/shokanron)・[金匱要略](https://github.com/medicalcloud/kinkiyoryaku)・[神農本草経](https://github.com/medicalcloud/shinnohonzokyo)・[和剤局方](https://github.com/medicalcloud/wazaikyokuho)がある。
 
 ## 構成
 

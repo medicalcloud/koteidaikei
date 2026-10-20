@@ -8,6 +8,7 @@ title: 目次
 
 - 作り方・資料・字体の方針：[README（GitHub）](https://github.com/medicalcloud/koteidaikei#readme)，[字体と変換の方針](字体と変換の方針.md)
 - 全データ（Markdown＋YAML）：[GitHub medicalcloud/koteidaikei](https://github.com/medicalcloud/koteidaikei)
+- 姉妹編：[傷寒論](https://medicalcloud.github.io/shokanron/)，[金匱要略](https://medicalcloud.github.io/kinkiyoryaku/)，[神農本草経](https://medicalcloud.github.io/shinnohonzokyo/)，[和剤局方](https://medicalcloud.github.io/wazaikyokuho/)
 
 ## 素問
 
